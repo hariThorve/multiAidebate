@@ -1,7 +1,9 @@
 import { ChatGroq } from "@langchain/groq";
+import "dotenv/config"
+
 
 const llm = new ChatGroq({
-  apiKey: "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",
+  apiKey: process.env.LLAMA_API,
   model: "llama-3.3-70b-versatile",
   temperature: 0,
   maxTokens: undefined,

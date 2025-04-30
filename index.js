@@ -1,8 +1,9 @@
 import { geminiResponse } from "./geminiResponse.js";
 import { llamaResponse } from "./llamaResponse.js";
 import { GoogleGenAI } from "@google/genai";
+import "dotenv/config"
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyBl3q0qn7YmzAPX9Ck-L4vmtQP24t0QmQo" });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API});
 
 
 

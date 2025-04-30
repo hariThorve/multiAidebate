@@ -1,7 +1,8 @@
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
+import "dotenv/config"
 
 const llm = new ChatGoogleGenerativeAI({
-  apiKey: "AIzaSyBl3q0qn7YmzAPX9Ck-L4vmtQP24t0QmQo",
+  apiKey: process.env.GEMINI_API,
   model: "gemini-1.5-pro",
   temperature: 0,
   maxRetries: 2,
